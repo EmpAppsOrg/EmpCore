@@ -18,7 +18,7 @@ public struct DiaryEntry: EmpModel, Equatable, Sendable {
         title: String,
         body: AttributedString = AttributedString(),
         tags: [Tag] = [],
-        links: [EmpLink] = [],
+        links: [EmpLink] = []
     ) {
         self.id = id
         self.createdAt = createdAt

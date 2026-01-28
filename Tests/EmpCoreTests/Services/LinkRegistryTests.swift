@@ -34,7 +34,7 @@ struct LinkRegistryTests {
 
         let links = [
             EmpLink(targetID: aliveID, targetAppID: "emp-tasks"),
-            EmpLink(targetID: deadID, targetAppID: "emp-diary"),
+            EmpLink(targetID: deadID, targetAppID: "emp-diary")
         ]
 
         let alive = registry.filterAlive(links)

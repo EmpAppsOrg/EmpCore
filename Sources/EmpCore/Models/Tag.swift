@@ -14,7 +14,7 @@ public struct Tag: EmpModel, Equatable, Hashable, Sendable {
         updatedAt: Date = Date(),
         isDeleted: Bool = false,
         name: String,
-        color: String,
+        color: String
     ) {
         self.id = id
         self.createdAt = createdAt

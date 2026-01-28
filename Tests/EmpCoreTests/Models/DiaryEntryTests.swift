@@ -10,7 +10,7 @@ struct DiaryEntryTests {
     func creation() {
         let entry = DiaryEntry(
             title: "My day",
-            body: AttributedString("Today was great"),
+            body: AttributedString("Today was great")
         )
 
         #expect(entry.title == "My day")
@@ -29,7 +29,7 @@ struct DiaryEntryTests {
             title: "Monday",
             body: AttributedString("Productive day"),
             tags: [tag],
-            links: [link],
+            links: [link]
         )
 
         let encoder = JSONEncoder()
@@ -51,7 +51,7 @@ struct DiaryEntryTests {
     func defaults() {
         let entry = DiaryEntry(title: "Empty")
 
-        #expect(String(entry.body.characters) == "")
+        #expect(String(entry.body.characters).isEmpty)
         #expect(entry.tags.isEmpty)
         #expect(entry.links.isEmpty)
     }

@@ -12,7 +12,7 @@ struct TaskItemTests {
             title: "Buy milk",
             body: "From the store",
             status: .todo,
-            priority: .medium,
+            priority: .medium
         )
 
         #expect(task.title == "Buy milk")
@@ -37,7 +37,7 @@ struct TaskItemTests {
             priority: .high,
             deadline: Date(),
             tags: [tag],
-            links: [link],
+            links: [link]
         )
 
         let encoder = JSONEncoder()
@@ -61,7 +61,7 @@ struct TaskItemTests {
     func defaults() {
         let task = TaskItem(title: "Quick task")
 
-        #expect(task.body == "")
+        #expect(task.body.isEmpty)
         #expect(task.status == .todo)
         #expect(task.priority == .medium)
         #expect(task.deadline == nil)

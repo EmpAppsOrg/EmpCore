@@ -8,8 +8,8 @@ public enum EmpAppRegistry {
             displayName: "Diary",
             actions: [
                 AppAction(type: .create, label: "New Entry", icon: "book"),
-                AppAction(type: .open, label: "Open Entry", icon: "book.fill"),
-            ],
+                AppAction(type: .open, label: "Open Entry", icon: "book.fill")
+            ]
         ),
         EmpApp(
             id: "emp-tasks",
@@ -17,9 +17,9 @@ public enum EmpAppRegistry {
             displayName: "Tasks",
             actions: [
                 AppAction(type: .create, label: "New Task", icon: "checklist"),
-                AppAction(type: .open, label: "Open Task", icon: "checklist.checked"),
-            ],
-        ),
+                AppAction(type: .open, label: "Open Task", icon: "checklist.checked")
+            ]
+        )
     ]
 
     public static func app(withID id: String) -> EmpApp? {

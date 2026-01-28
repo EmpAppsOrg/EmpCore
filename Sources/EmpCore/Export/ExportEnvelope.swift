@@ -10,7 +10,7 @@ public struct ExportEnvelope<T: EmpModel & Encodable & Decodable>: Codable {
         version: Int = 1,
         exportedAt: Date = Date(),
         sourceApp: String,
-        entries: [T],
+        entries: [T]
     ) {
         self.version = version
         self.exportedAt = exportedAt

@@ -15,7 +15,7 @@ struct TagTests {
             updatedAt: now,
             isDeleted: false,
             name: "work",
-            color: "#FF0000",
+            color: "#FF0000"
         )
 
         #expect(tag.name == "work")
@@ -31,7 +31,7 @@ struct TagTests {
             updatedAt: Date(),
             isDeleted: false,
             name: "personal",
-            color: "#00FF00",
+            color: "#00FF00"
         )
 
         let encoder = JSONEncoder()

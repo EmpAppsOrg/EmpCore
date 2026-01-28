@@ -9,7 +9,7 @@ struct ExportEnvelopeTests {
         let task = TaskItem(title: "Test task")
         let envelope = ExportEnvelope(
             sourceApp: "emp-tasks",
-            entries: [task],
+            entries: [task]
         )
 
         #expect(envelope.version == 1)
@@ -35,7 +35,7 @@ struct ExportEnvelopeTests {
         let entry = DiaryEntry(title: "Monday", body: AttributedString("Good day"))
         let envelope = ExportEnvelope(
             sourceApp: "emp-diary",
-            entries: [entry],
+            entries: [entry]
         )
 
         let encoder = JSONEncoder()

@@ -24,7 +24,7 @@ public struct TaskItem: EmpModel, Equatable, Sendable {
         priority: TaskPriority = .medium,
         deadline: Date? = nil,
         tags: [Tag] = [],
-        links: [EmpLink] = [],
+        links: [EmpLink] = []
     ) {
         self.id = id
         self.createdAt = createdAt
