@@ -56,4 +56,25 @@ struct TagTests {
 
         #expect(a == b)
     }
+
+    @Test("Hierarchical tag computes depth and parentPath")
+    func hierarchy() {
+        let tag = Tag(name: "work.project.task", color: "#FF0000")
+
+        #expect(tag.depth == 2)
+        #expect(tag.parentPath == "work.project")
+        #expect(tag.displayName == "task")
+        #expect(tag.components == ["work", "project", "task"])
+        #expect(!tag.isRoot)
+    }
+
+    @Test("Root tag has depth 0 and no parentPath")
+    func rootTag() {
+        let tag = Tag(name: "personal", color: "#00FF00")
+
+        #expect(tag.depth == 0)
+        #expect(tag.parentPath == nil)
+        #expect(tag.displayName == "personal")
+        #expect(tag.isRoot)
+    }
 }
