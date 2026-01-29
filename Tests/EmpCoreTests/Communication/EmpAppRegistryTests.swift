@@ -11,6 +11,7 @@ struct EmpAppRegistryTests {
 
         #expect(ids.contains("emp-diary"))
         #expect(ids.contains("emp-tasks"))
+        #expect(ids.contains("emp-contacts"))
     }
 
     @Test("Each app has a URL scheme")
@@ -32,6 +33,15 @@ struct EmpAppRegistryTests {
         let app = EmpAppRegistry.app(withID: "emp-tasks")
         #expect(app != nil)
         #expect(app?.displayName == "Tasks")
+    }
+
+    @Test("Find contacts app by ID")
+    func findContacts() {
+        let app = EmpAppRegistry.app(withID: "emp-contacts")
+        #expect(app != nil)
+        #expect(app?.scheme == "emp-contacts")
+        #expect(app?.displayName == "Contacts")
+        #expect(app?.actions.count == 2)
     }
 
     @Test("Unknown app ID returns nil")

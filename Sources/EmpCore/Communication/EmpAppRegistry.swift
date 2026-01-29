@@ -19,6 +19,15 @@ public enum EmpAppRegistry {
                 AppAction(type: .create, label: "New Task", icon: "checklist"),
                 AppAction(type: .open, label: "Open Task", icon: "checklist.checked")
             ]
+        ),
+        EmpApp(
+            id: "emp-contacts",
+            scheme: "emp-contacts",
+            displayName: "Contacts",
+            actions: [
+                AppAction(type: .create, label: "New Contact", icon: "person.badge.plus"),
+                AppAction(type: .open, label: "Open Contact", icon: "person.fill")
+            ]
         )
     ]
 
